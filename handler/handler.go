@@ -17,3 +17,6 @@ func Select(c *gin.Context)  {
 	service.Select(id.ID)
 
 }
+func Update(c *gin.Context){
+
+}
