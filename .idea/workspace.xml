@@ -2,10 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6ffe4830-fc1c-49ef-88a3-8cffac8d7623" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db/db.go" beforeDir="false" afterPath="$PROJECT_DIR$/db/db.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/handler/handler.go" beforeDir="false" afterPath="$PROJECT_DIR$/handler/handler.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/router/router.go" beforeDir="false" afterPath="$PROJECT_DIR$/router/router.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service/service.go" beforeDir="false" afterPath="$PROJECT_DIR$/service/service.go" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -111,5 +112,13 @@
       <screen x="72" y="27" width="1848" height="1053" />
     </state>
     <state x="427" y="156" width="1037" height="737" key="SettingsEditor/72.27.1848.1053@72.27.1848.1053" timestamp="1595405932453" />
+    <state x="746" y="181" width="490" height="752" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1595489449307">
+      <screen x="72" y="27" width="1848" height="1053" />
+    </state>
+    <state x="746" y="181" width="490" height="752" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/72.27.1848.1053@72.27.1848.1053" timestamp="1595489449307" />
+    <state x="660" y="196" width="670" height="676" key="search.everywhere.popup" timestamp="1595493000243">
+      <screen x="72" y="27" width="1848" height="1053" />
+    </state>
+    <state x="660" y="196" width="670" height="676" key="search.everywhere.popup/72.27.1848.1053@72.27.1848.1053" timestamp="1595493000243" />
   </component>
 </project>
