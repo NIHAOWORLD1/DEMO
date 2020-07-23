@@ -8,6 +8,12 @@ type Order struct {
 	Status   string
 	File_url string
 }
+var Orders Order
+
 type  Getid struct {
 	ID uint  "form:id"
+}
+
+type  GetorderList struct {
+	User_name string "form:id"
 }

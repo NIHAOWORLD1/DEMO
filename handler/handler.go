@@ -35,3 +35,36 @@ func Store(c *gin.Context){
 	})
 
 }
+func Selectlist(c *gin.Context){
+	var condition model.GetorderList
+	c.ShouldBind(&condition)
+	result, err :=service.Selectlist(condition)
+	if err != nil {
+		c.JSON(http.StatusOK, gin.H{
+			"code":    -1,
+			"message": "抱歉未找到相关信息",
+		})
+		return
+	}
+	c.JSON(http.StatusOK, gin.H{
+		"code": 1,
+		"data":   result,
+	})
+}
+
+func Update(c *gin.Context){
+	var renew model.Order
+	c.ShouldBind(&renew)
+    err :=service.UpdateOrder(renew)
+	if err != nil {
+		c.JSON(http.StatusOK, gin.H{
+			"code":    -1,
+			"message": "修改失败",
+		})
+		return
+	}
+	c.JSON(http.StatusOK, gin.H{
+		"code": 1,
+		"message": "修改成功",
+	})
+}

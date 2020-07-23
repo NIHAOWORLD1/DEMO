@@ -17,21 +17,39 @@ func init(){
       defer db.Close()
 }
 func Select(id uint)[]model.Order{
-	db1 :=db
-	defer db1.Close()
-	db1.SingularTable(true)
+	tx :=db.Begin()
+	tx.SingularTable(true)
 	//不设置数据库表会被加s而找不到
 	var order []model.Order
-	db1.Where("id = ?",id).Find(&order)
+	tx.Where("id = ?",id).Find(&order)
 	//相当于select * from order where id = name
+	tx.Commit()
 	return order
 }
 
 func Store(order model.Order)  error{
-	db1 :=db
-	defer db1.Close()
-	db1.SingularTable(true)
+	tx :=db.Begin()
+	tx.SingularTable(true)
 	//不设置数据库表会被加s而找不到
-	tx :=db1.Create(&order)
-	return tx.Error
+	result :=tx.Create(&order)
+	tx.Commit()
+	return result.Error
+}
+func Selectlist(con string)([]model.Order,error){
+	tx :=db.Begin()
+	tx.SingularTable(true)
+	//不设置数据库表会被加s而找不到
+	var orders []model.Order
+	result :=tx.Where("name LIKE ?", con).Find(&orders)
+	tx.Commit()
+	return orders,result.Error
+}
+
+func UpdateOrder(renew model.Order) error{
+	tx :=db.Begin()
+	tx.SingularTable(true)
+	//不设置数据库表会被加s而找不到
+	result :=tx.Save(&renew)
+	tx.Commit()
+	return result.Error
 }
