@@ -7,27 +7,33 @@ import (
 	"test/model"
 )
 var db *gorm.DB
-var err error
-func init(){
-      db,err :=gorm.Open("mysql","root:123456@/demo_order?charset=utf8&parseTime=True&loc=Local")
+func Init(){
+	var err error
+	db,err =gorm.Open("mysql","root:123456@/demo_order?charset=utf8&parseTime=True&loc=Local")
 	if err != nil {
-		fmt.Println(err)
+		panic(err)
 	}
-	db.HasTable("demo_order")
-      defer db.Close()
+	err = db.Error
+	if err != nil {
+		panic(err)
+	}
+	flag := db.HasTable("order")
+	if !flag {
+		println("err")
+	}
+
 }
-func Select(id uint)[]model.Order{
-	tx :=db.Begin()
-	tx.SingularTable(true)
+func Select(id uint) (model.Order,error) {
+	db.SingularTable(true)
 	//不设置数据库表会被加s而找不到
-	var order []model.Order
-	tx.Where("id = ?",id).Find(&order)
+	var order model.Order
+	result :=db.Where("id = ?",id).Find(&order)
 	//相当于select * from order where id = name
-	tx.Commit()
-	return order
+	return order,result.Error
 }
 
 func Store(order model.Order)  error{
+	fmt.Println(db)
 	tx :=db.Begin()
 	tx.SingularTable(true)
 	//不设置数据库表会被加s而找不到

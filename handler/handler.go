@@ -13,8 +13,19 @@ func Select(c *gin.Context)  {
 	if err := c.ShouldBind(&id); err != nil {
 		c.String(http.StatusBadRequest, err.Error())
 	}
-	c.String(http.StatusOK, "Success")
-	service.Select(id.ID)
+	result,err2 :=service.Select(id.ID)
+	if err2 != nil {
+		c.JSON(http.StatusOK, gin.H{
+			"code":    -1,
+			"message": "没有这个用户",
+		})
+		return
+	}
+	c.JSON(http.StatusOK, gin.H{
+		"code":  1,
+		"message": "查询成功",
+		"data":    result,
+	})
 
 }
 func Store(c *gin.Context){

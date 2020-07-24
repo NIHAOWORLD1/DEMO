@@ -5,12 +5,17 @@ import (
     "test/model"
 )
 
-func Select(id uint)  {
-    db.Select(id)
+func Select(id uint) (result model.Order,err2 error) {
+    result,err:=db.Select(id)
+    if err != nil {
+        err2 =err
+        return
+    }
+    return
 }
 func Store(order model.Order) (id uint,err error) {
     result := db.Store(order)
-    id =order.ID
+    id =order.Id
     if result != nil {
         err = result
         return
