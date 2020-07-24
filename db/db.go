@@ -21,19 +21,19 @@ func Init(){
 	if !flag {
 		println("err")
 	}
-
+	db.HasTable(&model.Order{})
+	db.SingularTable(true)
+	db.AutoMigrate(&model.Order{})
 }
 func Select(id uint) (model.Order,error) {
-	db.SingularTable(true)
 	//不设置数据库表会被加s而找不到
 	var order model.Order
 	result :=db.Where("id = ?",id).Find(&order)
-	//相当于select * from order where id = name
+	//相当于select * from order where id = id
 	return order,result.Error
 }
 
 func Store(order model.Order)  error{
-	fmt.Println(db)
 	tx :=db.Begin()
 	tx.SingularTable(true)
 	//不设置数据库表会被加s而找不到
@@ -41,17 +41,24 @@ func Store(order model.Order)  error{
 	tx.Commit()
 	return result.Error
 }
-func Selectlist(con string)([]model.Order,error){
+func Selectlist(con string)(orders []model.Order,err error){
 	tx :=db.Begin()
 	tx.SingularTable(true)
 	//不设置数据库表会被加s而找不到
-	var orders []model.Order
-	result :=tx.Where("name LIKE ?", con).Find(&orders)
-	tx.Commit()
-	return orders,result.Error
+	if len(con) != 0 {
+		result := tx.Where("user_name LIKE ?", con).Find(&orders)
+		err = result.Error
+		tx.Commit()
+	}else {
+		result := tx.Find(&orders)
+		err = result.Error
+		tx.Commit()
+	}
+	return
 }
 
 func UpdateOrder(renew model.Order) error{
+	fmt.Print(renew)
 	tx :=db.Begin()
 	tx.SingularTable(true)
 	//不设置数据库表会被加s而找不到

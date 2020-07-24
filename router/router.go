@@ -9,8 +9,8 @@ import (
 func Init() *gin.Engine {
 	router :=gin.Default()
 	router.GET("/order/select",handler.Select)
-    router.POST("/order/store/",handler.Store)
-	router.GET("/orders/select/",handler.Selectlist)
-	router.POST("/order/update/",handler.Update)
+    router.POST("/order/store",handler.Store)
+	router.GET("/orders/selectlist",handler.Selectlist)
+	router.POST("/order/update",handler.Update)
 	return router
 }

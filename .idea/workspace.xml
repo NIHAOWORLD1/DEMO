@@ -5,8 +5,8 @@
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/db/db.go" beforeDir="false" afterPath="$PROJECT_DIR$/db/db.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/handler/handler.go" beforeDir="false" afterPath="$PROJECT_DIR$/handler/handler.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/main.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/model/model.go" beforeDir="false" afterPath="$PROJECT_DIR$/model/model.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/router/router.go" beforeDir="false" afterPath="$PROJECT_DIR$/router/router.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/service/service.go" beforeDir="false" afterPath="$PROJECT_DIR$/service/service.go" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -51,7 +51,7 @@
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="settings.editor.selected.configurable" value="go.vgo" />
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Go Test.TestSelect in test/service">
     <configuration default="true" type="GoApplicationRunConfiguration" factoryName="Go Application">
       <module name="test" />
       <working_directory value="$PROJECT_DIR$/" />
@@ -67,6 +67,15 @@
       <package value="test" />
       <method v="2" />
     </configuration>
+    <configuration name="TestSelect in test/service" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
+      <module name="test" />
+      <working_directory value="$PROJECT_DIR$/service" />
+      <framework value="gotest" />
+      <kind value="PACKAGE" />
+      <package value="test/service" />
+      <pattern value="^TestSelect$" />
+      <method v="2" />
+    </configuration>
     <configuration default="true" type="GoTestRunConfiguration" factoryName="Go Test">
       <module name="test" />
       <working_directory value="$PROJECT_DIR$/" />
@@ -78,6 +87,7 @@
     <recent_temporary>
       <list>
         <item itemvalue="Go Build.go build test" />
+        <item itemvalue="Go Test.TestSelect in test/service" />
       </list>
     </recent_temporary>
   </component>
@@ -93,22 +103,22 @@
       <screen x="72" y="27" width="1848" height="1053" />
     </state>
     <state x="1184" y="285" width="424" height="491" key="FileChooserDialogImpl/72.27.1848.1053@72.27.1848.1053" timestamp="1595405596427" />
-    <state width="1794" height="413" key="GridCell.Tab.0.bottom" timestamp="1595556621916">
+    <state width="1390" height="389" key="GridCell.Tab.0.bottom" timestamp="1595570969769">
       <screen x="72" y="27" width="1848" height="1053" />
     </state>
-    <state width="1794" height="413" key="GridCell.Tab.0.bottom/72.27.1848.1053@72.27.1848.1053" timestamp="1595556621916" />
-    <state width="1794" height="413" key="GridCell.Tab.0.center" timestamp="1595556621915">
+    <state width="1390" height="389" key="GridCell.Tab.0.bottom/72.27.1848.1053@72.27.1848.1053" timestamp="1595570969769" />
+    <state width="1390" height="389" key="GridCell.Tab.0.center" timestamp="1595570969769">
       <screen x="72" y="27" width="1848" height="1053" />
     </state>
-    <state width="1794" height="413" key="GridCell.Tab.0.center/72.27.1848.1053@72.27.1848.1053" timestamp="1595556621915" />
-    <state width="1794" height="413" key="GridCell.Tab.0.left" timestamp="1595556621915">
+    <state width="1390" height="389" key="GridCell.Tab.0.center/72.27.1848.1053@72.27.1848.1053" timestamp="1595570969769" />
+    <state width="1390" height="389" key="GridCell.Tab.0.left" timestamp="1595570969769">
       <screen x="72" y="27" width="1848" height="1053" />
     </state>
-    <state width="1794" height="413" key="GridCell.Tab.0.left/72.27.1848.1053@72.27.1848.1053" timestamp="1595556621915" />
-    <state width="1794" height="413" key="GridCell.Tab.0.right" timestamp="1595556621915">
+    <state width="1390" height="389" key="GridCell.Tab.0.left/72.27.1848.1053@72.27.1848.1053" timestamp="1595570969769" />
+    <state width="1390" height="389" key="GridCell.Tab.0.right" timestamp="1595570969769">
       <screen x="72" y="27" width="1848" height="1053" />
     </state>
-    <state width="1794" height="413" key="GridCell.Tab.0.right/72.27.1848.1053@72.27.1848.1053" timestamp="1595556621915" />
+    <state width="1390" height="389" key="GridCell.Tab.0.right/72.27.1848.1053@72.27.1848.1053" timestamp="1595570969769" />
     <state width="1794" height="331" key="GridCell.Tab.1.bottom" timestamp="1595554467863">
       <screen x="72" y="27" width="1848" height="1053" />
     </state>
