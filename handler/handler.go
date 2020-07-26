@@ -4,6 +4,8 @@ import (
 	"fmt"
 	"github.com/gin-gonic/gin"
 	"net/http"
+	"os"
+	"path"
 	"test/model"
 	"test/service"
 )
@@ -48,7 +50,6 @@ func CreateOrder(c *gin.Context){
 	})
 
 }
-
 // 查询订单列表
 func SearchOrderList(c *gin.Context){
 	var condition model.GetCondition
@@ -66,7 +67,7 @@ func SearchOrderList(c *gin.Context){
 		"data":   result,
 	})
 }
-//更新订单
+// 更新订单
 func UpdateOrder(c *gin.Context){
 	var renew model.Order
 	c.ShouldBind(&renew)
@@ -82,4 +83,32 @@ func UpdateOrder(c *gin.Context){
 		"code": 1,
 		"message": "修改成功",
 	})
+}
+// 上传文件
+func Upload(c *gin.Context){
+	file, err := c.FormFile("upload")
+	if err != nil {
+		c.String(http.StatusBadRequest, "请求失败")
+		return
+	}
+	fileName := file.Filename
+	fmt.Println("文件名：", fileName)
+	// 获取当前路径
+	dir, _ := os.Getwd()
+	dst :=path.Join(dir,fileName)
+	// 保存文件到服务器本地
+	// SaveUploadedFile(文件头，保存路径)
+	if err := c.SaveUploadedFile(file, fileName); err != nil {
+		c.String(http.StatusBadRequest, "保存失败 Error:%s", err.Error())
+		return
+	}
+	err3 :=service.UploadFile(dst)
+	if err3 != nil {
+		c.JSON(http.StatusOK, gin.H{
+			"code":    -1,
+			"message": "url更新失败",
+		})
+		return
+	}
+	c.String(http.StatusOK, "上传文件成功")
 }

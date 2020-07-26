@@ -41,3 +41,10 @@ func UpdateOrder(renew model.Order) (err error){
     }
     return
 }
+
+func UploadFile(dst string) error{
+    var url model.Order
+    url.File_url=dst
+    result :=db.UpdateOrder(url)
+    return result
+}
