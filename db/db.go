@@ -24,13 +24,12 @@ func Init(){
 	}
 }
 func Createdatabese(name string) {
-	//连接数据库
+	// 连接数据库
 	db, err := sql.Open("mysql", "root:123456@tcp(127.0.0.1:3306)/")
 	if err != nil {
 		panic(err)
 	}
-	//defer db.Close()
-    //exec函数为执行sql语句
+    // exec函数为执行sql语句
 	_, err = db.Exec("CREATE DATABASE "+name)
 	if err != nil {
 		panic(err)
@@ -45,11 +44,11 @@ func Createdatabese(name string) {
 func GetOrder(id uint) (model.Order,error) {
 	var order model.Order
 	result :=db.Where("id = ?",id).Find(&order)
-	//相当于select * from order where id = id
+	// 相当于select * from order where id = id
 	return order,result.Error
 }
 
-func CreateOrder(order model.Order)  error{
+func CreateOrder(order model.Order) error{
 	tx :=db.Begin()
 	if err :=tx.Create(&order).Error;err != nil{
 		tx.Rollback()
@@ -60,8 +59,6 @@ func CreateOrder(order model.Order)  error{
 }
 func SearchOrderList(con string)(orders []model.Order,err error){
 	tx :=db.Begin()
-	tx.SingularTable(true)
-	//不设置数据库表会被加s而找不到
 	if len(con) != 0 {
 		result := tx.Where("user_name LIKE ?", con).Find(&orders)
 		err = result.Error
