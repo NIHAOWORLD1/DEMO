@@ -1,9 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
+<<<<<<< HEAD
     <list default="true" id="6ffe4830-fc1c-49ef-88a3-8cffac8d7623" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
+=======
+    <list default="true" id="6ffe4830-fc1c-49ef-88a3-8cffac8d7623" name="Default Changelist" comment="" />
+>>>>>>> 96caa0a456b60dff58efb678e6adb23a8e731e35
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -16,7 +20,11 @@
       </list>
     </option>
   </component>
+<<<<<<< HEAD
   <component name="GOROOT" path="/usr/local/go" />
+=======
+  <component name="GOROOT" path="C:\Go" />
+>>>>>>> 96caa0a456b60dff58efb678e6adb23a8e731e35
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
@@ -31,7 +39,10 @@
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
+<<<<<<< HEAD
     <option name="showExcludedFiles" value="true" />
+=======
+>>>>>>> 96caa0a456b60dff58efb678e6adb23a8e731e35
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
@@ -43,8 +54,15 @@
     <property name="configurable.Module.GOPATH.is.expanded" value="false" />
     <property name="configurable.Project.GOPATH.is.expanded" value="true" />
     <property name="go.import.settings.migrated" value="true" />
+<<<<<<< HEAD
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="settings.editor.selected.configurable" value="go.vgo" />
+=======
+    <property name="go.sdk.automatically.set" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
+>>>>>>> 96caa0a456b60dff58efb678e6adb23a8e731e35
   </component>
   <component name="RunManager" selected="Go Build.go build test">
     <configuration default="true" type="GoApplicationRunConfiguration" factoryName="Go Application">
@@ -62,6 +80,27 @@
       <package value="test" />
       <method v="2" />
     </configuration>
+<<<<<<< HEAD
+=======
+    <configuration name="TestCreateOrder in test/service" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
+      <module name="test" />
+      <working_directory value="$PROJECT_DIR$/service" />
+      <framework value="gotest" />
+      <kind value="PACKAGE" />
+      <package value="test/service" />
+      <pattern value="^TestCreateOrder$" />
+      <method v="2" />
+    </configuration>
+    <configuration name="TestSelect in test/service (1)" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
+      <module name="test" />
+      <working_directory value="$PROJECT_DIR$/service" />
+      <framework value="gotest" />
+      <kind value="PACKAGE" />
+      <package value="test/service" />
+      <pattern value="^TestSelect$" />
+      <method v="2" />
+    </configuration>
+>>>>>>> 96caa0a456b60dff58efb678e6adb23a8e731e35
     <configuration name="TestSelect in test/service" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
       <module name="test" />
       <working_directory value="$PROJECT_DIR$/service" />
@@ -82,15 +121,37 @@
     <recent_temporary>
       <list>
         <item itemvalue="Go Build.go build test" />
+<<<<<<< HEAD
+=======
+        <item itemvalue="Go Test.TestCreateOrder in test/service" />
+        <item itemvalue="Go Test.TestSelect in test/service (1)" />
+>>>>>>> 96caa0a456b60dff58efb678e6adb23a8e731e35
         <item itemvalue="Go Test.TestSelect in test/service" />
       </list>
     </recent_temporary>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
+<<<<<<< HEAD
     <option name="version" value="1" />
   </component>
   <component name="VgoProject">
     <integration-enabled>true</integration-enabled>
+=======
+    <option name="version" value="2" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <ignored-roots>
+      <path value="$PROJECT_DIR$" />
+    </ignored-roots>
+  </component>
+  <component name="VgoProject">
+    <integration-enabled>true</integration-enabled>
+    <environment>
+      <map>
+        <entry key="GOPROXY" value="http://goproxy.io" />
+      </map>
+    </environment>
+>>>>>>> 96caa0a456b60dff58efb678e6adb23a8e731e35
     <proxy>http://goproxy.io</proxy>
   </component>
   <component name="WindowStateProjectService">
@@ -98,6 +159,7 @@
       <screen x="72" y="27" width="1848" height="1053" />
     </state>
     <state x="1184" y="285" width="424" height="491" key="FileChooserDialogImpl/72.27.1848.1053@72.27.1848.1053" timestamp="1595405596427" />
+<<<<<<< HEAD
     <state width="1794" height="331" key="GridCell.Tab.0.bottom" timestamp="1595591821242">
       <screen x="72" y="27" width="1848" height="1053" />
     </state>
@@ -133,15 +195,64 @@
     <state x="427" y="156" width="1037" height="737" key="SettingsEditor" timestamp="1595405932453">
       <screen x="72" y="27" width="1848" height="1053" />
     </state>
+=======
+    <state width="1323" height="191" key="GridCell.Tab.0.bottom" timestamp="1595776749343">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1323" height="191" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1595776749343" />
+    <state width="1794" height="238" key="GridCell.Tab.0.bottom/72.27.1848.1053@72.27.1848.1053" timestamp="1595581490678" />
+    <state width="1323" height="191" key="GridCell.Tab.0.center" timestamp="1595776749343">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1323" height="191" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1595776749343" />
+    <state width="1794" height="238" key="GridCell.Tab.0.center/72.27.1848.1053@72.27.1848.1053" timestamp="1595581490677" />
+    <state width="1323" height="191" key="GridCell.Tab.0.left" timestamp="1595776749343">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1323" height="191" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1595776749343" />
+    <state width="1794" height="238" key="GridCell.Tab.0.left/72.27.1848.1053@72.27.1848.1053" timestamp="1595581490677" />
+    <state width="1323" height="191" key="GridCell.Tab.0.right" timestamp="1595776749343">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1323" height="191" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1595776749343" />
+    <state width="1794" height="238" key="GridCell.Tab.0.right/72.27.1848.1053@72.27.1848.1053" timestamp="1595581490678" />
+    <state width="1323" height="223" key="GridCell.Tab.1.bottom" timestamp="1595774643270">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1323" height="223" key="GridCell.Tab.1.bottom/0.0.1366.728@0.0.1366.728" timestamp="1595774643270" />
+    <state width="1794" height="331" key="GridCell.Tab.1.bottom/72.27.1848.1053@72.27.1848.1053" timestamp="1595581433108" />
+    <state width="1323" height="223" key="GridCell.Tab.1.center" timestamp="1595774643269">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1323" height="223" key="GridCell.Tab.1.center/0.0.1366.728@0.0.1366.728" timestamp="1595774643269" />
+    <state width="1794" height="331" key="GridCell.Tab.1.center/72.27.1848.1053@72.27.1848.1053" timestamp="1595581433107" />
+    <state width="1323" height="223" key="GridCell.Tab.1.left" timestamp="1595774643269">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1323" height="223" key="GridCell.Tab.1.left/0.0.1366.728@0.0.1366.728" timestamp="1595774643269" />
+    <state width="1794" height="331" key="GridCell.Tab.1.left/72.27.1848.1053@72.27.1848.1053" timestamp="1595581433107" />
+    <state width="1323" height="223" key="GridCell.Tab.1.right" timestamp="1595774643269">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1323" height="223" key="GridCell.Tab.1.right/0.0.1366.728@0.0.1366.728" timestamp="1595774643269" />
+    <state width="1794" height="331" key="GridCell.Tab.1.right/72.27.1848.1053@72.27.1848.1053" timestamp="1595581433107" />
+    <state x="262" y="20" width="916" height="708" key="SettingsEditor" timestamp="1595754341865">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="262" y="20" width="916" height="708" key="SettingsEditor/0.0.1366.728@0.0.1366.728" timestamp="1595754341865" />
+>>>>>>> 96caa0a456b60dff58efb678e6adb23a8e731e35
     <state x="427" y="156" width="1037" height="737" key="SettingsEditor/72.27.1848.1053@72.27.1848.1053" timestamp="1595405932453" />
     <state x="746" y="181" width="490" height="752" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1595489449307">
       <screen x="72" y="27" width="1848" height="1053" />
     </state>
     <state x="746" y="181" width="490" height="752" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/72.27.1848.1053@72.27.1848.1053" timestamp="1595489449307" />
+<<<<<<< HEAD
     <state x="762" y="469" width="467" height="175" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1595811762035">
       <screen x="72" y="27" width="1848" height="1053" />
     </state>
     <state x="762" y="469" width="467" height="175" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/72.27.1848.1053@72.27.1848.1053" timestamp="1595811762035" />
+=======
+>>>>>>> 96caa0a456b60dff58efb678e6adb23a8e731e35
     <state x="300" y="203" width="923" height="631" key="com.intellij.xdebugger.impl.breakpoints.ui.BreakpointsDialogFactory$2" timestamp="1595553660237">
       <screen x="72" y="27" width="1848" height="1053" />
     </state>
@@ -150,5 +261,12 @@
       <screen x="72" y="27" width="1848" height="1053" />
     </state>
     <state x="660" y="196" width="670" height="676" key="search.everywhere.popup/72.27.1848.1053@72.27.1848.1053" timestamp="1595493000243" />
+<<<<<<< HEAD
+=======
+    <state x="405" y="275" key="vcs.readOnlyHandler.ReadOnlyStatusDialog" timestamp="1595775886558">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="405" y="275" key="vcs.readOnlyHandler.ReadOnlyStatusDialog/0.0.1366.728@0.0.1366.728" timestamp="1595775886558" />
+>>>>>>> 96caa0a456b60dff58efb678e6adb23a8e731e35
   </component>
 </project>

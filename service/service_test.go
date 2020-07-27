@@ -2,13 +2,14 @@ package service
 import(
 	"fmt"
 	"test/db"
+	"test/model"
 	"testing"
 )
 
 func TestSelect(t *testing.T) {
 	db.Init()
 	id :=uint(1)
-	req,err:=Select(id)
+	req,err:=GetOrder(id)
     if err != nil{
     	t.Error()
 	}
@@ -17,8 +18,36 @@ func TestSelect(t *testing.T) {
 		fmt.Print(req)
 	}
 }
-
-func TestStore(t *testing.T) {
+func TestCreateOrder(t *testing.T) {
+	 db.Init()
+     testdata :=model.Order{1,"1","niexiaojun",1000,"seccess",""}
+     id,err :=CreateOrder(testdata)
+	if err != nil {
+       t.Error()
+	}
+	if id == testdata.Id{
+		t.Log()
+	}
+}
+func TestUpdateOrder(t *testing.T) {
+	db.Init()
+	testdata :=model.Order{2,"1","niexiaojun",1000,"seccess",""}
+	err :=db.UpdateOrder(testdata)
+	if err != nil {
+		t.Error()
+	}
+	t.Log()
+}
+func TestSearchOrderList(t *testing.T) {
+	db.Init()
+	testdata :=model.Order{1,"2","huangxiaohua",2000,"seccess",""}
+	err :=db.UpdateOrder(testdata)
+	if err != nil {
+		t.Error()
+	}
+	t.Log()
+}
+func TestUploadFile(t *testing.T) {
 	db.Init()
 
 }

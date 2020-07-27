@@ -17,9 +17,8 @@ func Init(){
 	//是否已经存在表
 	flag := db.HasTable("order")
 	if !flag {
-		// db.HasTable(&model.Order{})
-		// 不设置数据库表会被加s而找不到
-		db.SingularTable(true)
+		db.HasTable(&model.Order{})
+		//不设置数据库表会被加s而找不到
 		db.AutoMigrate(&model.Order{})
 	}
 }
@@ -29,7 +28,6 @@ func Createdatabese(name string) {
 	if err != nil {
 		panic(err)
 	}
-	// defer db.Close()
     // exec函数为执行sql语句
 	_, err = db.Exec("CREATE DATABASE "+name)
 	if err != nil {
@@ -41,38 +39,43 @@ func Createdatabese(name string) {
 		panic(err)
 	}
 }
-
-func Select(id uint) (model.Order,error) {
+// 查询订单
+func GetOrder(id uint) (model.Order,error) {
 	var order model.Order
 	result :=db.Where("id = ?",id).Find(&order)
 	// 相当于select * from order where id = id
 	return order,result.Error
 }
-
-func Store(order model.Order)  error{
+// 创建订单
+func CreateOrder(order model.Order) error{
 	tx :=db.Begin()
-	if err := tx.Create(&order).Error; err != nil {
+	tx.SingularTable(true)
+	if err :=tx.Create(&order).Error;err != nil{
 		tx.Rollback()
 		return err
 	}
 	tx.Commit()
 	return nil
 }
-func Selectlist(con string)(orders []model.Order,err error){
-	// 不设置数据库表会被加s而找不到
+// 查询订单
+func SearchOrderList(con string)(orders []model.Order,err error){
+	tx :=db.Begin()
 	if len(con) != 0 {
-		result := db.Where("user_name LIKE ?", con).Find(&orders)
+		result := tx.Where("user_name LIKE ?", con).Find(&orders)
 		err = result.Error
+		tx.Commit()
 	}else {
-		result := db.Find(&orders)
+		result := tx.Find(&orders)
 		err = result.Error
+		tx.Commit()
 	}
 	return
 }
-
+// 更新订单
 func UpdateOrder(renew model.Order) error{
 	tx :=db.Begin()
-	if err := tx.Save(&renew).Error; err != nil {
+    //tx.SingularTable(true)
+	if err :=tx.Model(&renew).Updates(renew).Error;err != nil{
 		tx.Rollback()
 		return err
 	}

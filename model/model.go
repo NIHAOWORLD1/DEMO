@@ -8,11 +8,10 @@ type Order struct {
 	Status   string `json:"status" form:"status"`
 	File_url string `json:"file_url" form:"file_url"`
 }
-
-type  Getid struct {
+type  GetId struct {
 	Id uint  `form:"id"`
 }
 
-type  GetorderList struct {
+type  GetCondition struct {
 	User_name string `form:"user_name"`
 }
