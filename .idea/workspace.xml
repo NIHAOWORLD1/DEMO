@@ -3,8 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="6ffe4830-fc1c-49ef-88a3-8cffac8d7623" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db/db.go" beforeDir="false" afterPath="$PROJECT_DIR$/db/db.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/service/service_test.go" beforeDir="false" afterPath="$PROJECT_DIR$/service/service_test.go" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -140,6 +138,10 @@
       <screen x="72" y="27" width="1848" height="1053" />
     </state>
     <state x="746" y="181" width="490" height="752" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/72.27.1848.1053@72.27.1848.1053" timestamp="1595489449307" />
+    <state x="762" y="469" width="467" height="175" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1595811762035">
+      <screen x="72" y="27" width="1848" height="1053" />
+    </state>
+    <state x="762" y="469" width="467" height="175" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/72.27.1848.1053@72.27.1848.1053" timestamp="1595811762035" />
     <state x="300" y="203" width="923" height="631" key="com.intellij.xdebugger.impl.breakpoints.ui.BreakpointsDialogFactory$2" timestamp="1595553660237">
       <screen x="72" y="27" width="1848" height="1053" />
     </state>
