@@ -17,3 +17,8 @@ func TestSelect(t *testing.T) {
 		fmt.Print(req)
 	}
 }
+
+func TestStore(t *testing.T) {
+	db.Init()
+
+}
