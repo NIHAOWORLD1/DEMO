@@ -12,6 +12,6 @@ func Init() *gin.Engine {
 	router.GET("/orders/Searchorderlist",handler.SearchOrderList)
 	router.POST("/order/updateorder",handler.UpdateOrder)
 	router.POST("/file/upload",handler.Upload)
-	router.POST("/file/download",handler.)
+	router.POST("/file/download",handler.Download)
 	return router
 }

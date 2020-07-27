@@ -3,12 +3,14 @@ package handler
 import (
 	"fmt"
 	"github.com/gin-gonic/gin"
+	"io/ioutil"
 	"net/http"
 	"os"
 	"path"
 	"strconv"
 	"test/model"
 	"test/service"
+	"time"
 )
 
 // 查询单个订单
@@ -120,3 +122,40 @@ func Upload(c *gin.Context){
 	c.String(http.StatusOK, "上传文件成功")
 }
 // 下载文件
+func Download(c *gin.Context)  {
+	var id model.GetId
+	c.ShouldBind(&id)
+	result,err:=service.GetOrder(id.Id)
+	// 数据库中获取url
+	if err != nil{
+		c.JSON(http.StatusOK, gin.H{
+			"code":    -1,
+			"message": "url为空",
+		})
+		return
+	}
+	// 创建一个到远程连接的请求
+	resp, err := http.Get(result.File_url)
+	if err != nil {
+		panic(err)
+	}
+	defer resp.Body.Close()
+	data,err2 :=ioutil.ReadAll(resp.Body)
+	if err2 != nil{
+		panic(err2)
+	}
+	// 为下载文件设定命名
+	fileName :=fmt.Sprintf("download_%d.jpg",time.Now().Unix())
+	// 下载文件的存放路径
+	filepath :=fmt.Sprintf("/download/%s",fileName)
+	// 创建空白文件
+	file,err3 :=os.Create(filepath)
+	if err3 != nil{
+		panic(err3)
+	}
+	defer file.Close()
+	_,err4 :=file.Write(data)
+	if err4 != nil{
+		panic(err4)
+	}
+}

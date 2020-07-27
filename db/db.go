@@ -41,6 +41,7 @@ func Createdatabese(name string) {
 }
 // 查询订单
 func GetOrder(id uint) (model.Order,error) {
+	db.SingularTable(true)
 	var order model.Order
 	result :=db.Where("id = ?",id).Find(&order)
 	// 相当于select * from order where id = id
