@@ -75,7 +75,7 @@ func SearchOrderList(con string)(orders []model.Order,err error){
 // 更新订单
 func UpdateOrder(renew model.Order) error{
 	tx :=db.Begin()
-    //tx.SingularTable(true)
+    tx.SingularTable(true)
 	if err :=tx.Model(&renew).Updates(renew).Error;err != nil{
 		tx.Rollback()
 		return err

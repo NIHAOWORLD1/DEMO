@@ -147,7 +147,7 @@ func Download(c *gin.Context)  {
 	// 为下载文件设定命名
 	fileName :=fmt.Sprintf("download_%d.jpg",time.Now().Unix())
 	// 下载文件的存放路径
-	filepath :=fmt.Sprintf("/download/%s",fileName)
+	filepath :=fmt.Sprintf("./download/%s",fileName)
 	// 创建空白文件
 	file,err3 :=os.Create(filepath)
 	if err3 != nil{
